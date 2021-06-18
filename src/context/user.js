@@ -24,7 +24,7 @@ function UserProvider({ children }) {
                      following_url: data.following_url,
                      organizations_url: data.following_url,
                      starred_url: data.starred_url,
-                     repos: data.publics_repos,
+                     repos: data.public_repos,
                      gist: data.public_gists,
                      followers: data.followers,
                      following: data.following})

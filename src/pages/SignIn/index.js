@@ -1,5 +1,8 @@
 import { useContext, useState } from 'react'
 import { UserContext } from '../../context/user'
+
+import history from '../../services/history'
+
 import * as Styles from './styles'
 
 export default function SignIn() {
@@ -12,6 +15,7 @@ export default function SignIn() {
             setWritten(false)
         } else {
             getUser();
+            history.push('/user');
         }
     }
 
