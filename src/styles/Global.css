@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+:root {
+    --black: #000000;
+    --dark-grey-800: #1F1F1F;
+    --dark-grey-700: #292929;
+    --dark-grey-600: #3E3E3E;
+
+    --white: #ffffff;
+    --light-grey-400: rgba(82, 82, 82, 0.36);
+    --light-grey-500: rgba(165, 165, 165, 1);
+    --light-grey-600: rgba(150, 150, 150, 1);
+
+    --red: rgba(208, 52, 52, 1);
+    --yellow: rgba(255, 206, 0, 1);
+    --green: rgba(99, 191, 31, 1);
+}
