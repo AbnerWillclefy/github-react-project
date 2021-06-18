@@ -19,7 +19,7 @@ export const Logo = styled.img`
     margin-bottom: 48px;
 `;
 
-export const Input = styled.input`
+export const Login = styled.div`
     width: 340px;
     height: 56px;
     border-radius: 12px;
@@ -27,10 +27,32 @@ export const Input = styled.input`
     border: none;
     outline: none;
     padding: 16px 20px;
+    margin-bottom: 19px;
+
+    position: relative;
+    z-index: 0;
+`;
+
+export const Input = styled.input`
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    position: relative;
+    z-index: 1;
 
     font-size: 20px;
     line-height: 20px;
-    margin-bottom: 19px;
+`;
+
+export const Span = styled.span`
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--red);
+    position: relative;
+    bottom: 85%;
+    left: 65%;
+    visibility: ${({ written }) => written ? 'hidden' : 'visible'};
 `;
 
 export const Button = styled.button`
