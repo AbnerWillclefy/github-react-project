@@ -18,7 +18,7 @@ export default function Profile() {
         }
     }
 
-    const { user, loading} = useContext(UserContext);
+    const { user, loading } = useContext(UserContext);
 
     if(loading) {
         return (
@@ -52,20 +52,25 @@ export default function Profile() {
 
                     <Styles.Numbers>
                         <Styles.Cards>
-                            <div>{user.followers}</div>
+                            <Styles.NumberInfo>{user.followers}</Styles.NumberInfo>
                             <span>Seguidores</span>
                         </Styles.Cards>
                         <Styles.Cards>
-                            <div>{user.following}</div>
+                            <Styles.NumberInfo>{user.following}</Styles.NumberInfo>
                             <span>Seguindo</span>
                         </Styles.Cards>
                         <Styles.Cards>
-                            <div>{user.repos}</div>
+                            <Styles.NumberInfo>{user.repos}</Styles.NumberInfo>
                             <span>Repos</span>
                         </Styles.Cards>
                     </Styles.Numbers>
-                </Styles.Bottom>
 
+                    <Styles.BioName>
+                        <Styles.Yellow>{}</Styles.Yellow>
+                        <Styles.Name>BIO</Styles.Name>
+                    </Styles.BioName>
+                    <Styles.Bio>{user.bio}</Styles.Bio>
+                </Styles.Bottom>
             </Styles.Container>
         )
     }

@@ -98,4 +98,25 @@ export const Cards = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    font-weight: bold;
+`;
+
+export const NumberInfo = styled.div`
+    font-size: 40px;
+`;
+
+export const BioName = styled.div`
+    display: flex;
+    width: 100%;
+    margin-top: 47px;
+    font-weight: bold;
+`;
+
+export const Bio = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0 18px 0 25px;
+    font-size: 18px;
 `;
