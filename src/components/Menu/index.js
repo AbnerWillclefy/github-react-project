@@ -4,7 +4,7 @@ import { UserContext } from '../../context/user';
 import { useContext } from 'react';
 
 export default function Menu() {
-    const { gotoRepos, gotoFollowers } = useContext(UserContext);
+    const { gotoRepos, gotoFollowers, gotoFollows } = useContext(UserContext);
     
 
     return (
@@ -21,7 +21,7 @@ export default function Menu() {
                 <img src='assets/users.png' alt='Followers'/>
                 <span>Seguidores</span>
             </Styles.Option>
-            <Styles.Option onClick={() => {history.push('/following')}}>
+            <Styles.Option onClick={() => {history.push('/following'); gotoFollows()}}>
                 <img src='assets/users.png' alt='Followings'/>
                 <span>Seguindo</span>
             </Styles.Option>

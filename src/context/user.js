@@ -10,7 +10,9 @@ function UserProvider({ children }) {
     const [reposData, setReposData] = useState({});
     const [gotRepos, setGotRepos] = useState(false);
     const [followersData, setFollowersData] = useState({});
-    const [gotFollowers, setGotFollowers] = useState(false)
+    const [gotFollowers, setGotFollowers] = useState(false);
+    const [followsData, setFollowsData] = useState({});
+    const [gotFollows, setGotFollows] = useState(false)
 
     function gotoRepos() {
         if(gotRepos === false) {
@@ -25,11 +27,20 @@ function UserProvider({ children }) {
             setGotFollowers(true);
         }
     }
+
+    function gotoFollows() {
+        if(gotFollows === false) {
+            getFollows();
+            setGotFollows(true);
+        }
+    }
     
     async function getUser() {
         try {
             setLoading(true);
             setGotRepos(false);
+            setGotFollowers(false);
+            setGotFollows(false);
             const { data } = await api.get(username);
 
             setUser({name: data.name, 
@@ -80,6 +91,20 @@ function UserProvider({ children }) {
         setLoading(false)
     }
 
+    async function getFollows() {
+        setLoading(true)
+        setGotFollows(false);
+        try {
+            const { data } = await api.get(`${username}/following`)
+
+            setFollowsData(data);
+
+        } catch(err) {
+            console.log(err)
+        }
+        setLoading(false)
+    }
+
     return (
         <UserContext.Provider value={{username, 
                                       setUsername, 
@@ -92,7 +117,9 @@ function UserProvider({ children }) {
                                       reposData,
                                       gotoRepos,
                                       followersData,
-                                      gotoFollowers, }}>
+                                      gotoFollowers,
+                                      followsData,
+                                      gotoFollows, }}>
             {children}
         </UserContext.Provider>
     )
