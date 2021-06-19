@@ -4,14 +4,24 @@ import api from '../services/api'
 const UserContext = createContext();
 
 function UserProvider({ children }) {
-    const [name, setName] = useState('');
+    const [username, setUsername] = useState('');
     const [user, setUser] = useState({});
     const [loading, setLoading] = useState(false);
+    const [reposData, setReposData] = useState({});
+    const [gotRepos, setGotRepos] = useState(false)
+
+    function gotoRepos() {
+        if(gotRepos === false) {
+            getRepos();
+            setGotRepos(true);
+        }
+    }
     
     async function getUser() {
         try {
             setLoading(true);
-            const { data } = await api.get(name);
+            setGotRepos(false);
+            const { data } = await api.get(username);
 
             setUser({name: data.name, 
                      login: data.login,
@@ -33,8 +43,31 @@ function UserProvider({ children }) {
             console.log(err)}
         }
 
+    async function getRepos() {
+        setLoading(true)
+        setGotRepos(false);
+        try {
+            const { data } = await api.get(`${username}/repos`)
+
+            setReposData(data);
+
+        } catch(err) {
+            console.log(err)
+        }
+        setLoading(false)
+    }
+
     return (
-        <UserContext.Provider value={{name, setName, getUser, user, loading}}>
+        <UserContext.Provider value={{username, 
+                                      setUsername, 
+                                      getUser, 
+                                      user, 
+                                      loading, 
+                                      setUser, 
+                                      setLoading, 
+                                      getRepos, 
+                                      reposData,
+                                      gotoRepos, }}>
             {children}
         </UserContext.Provider>
     )

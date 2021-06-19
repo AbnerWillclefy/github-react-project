@@ -51,7 +51,7 @@ export const Span = styled.span`
     color: var(--red);
     position: relative;
     bottom: 85%;
-    left: 65%;
+    left: 55%;
     visibility: ${({ written }) => written ? 'hidden' : 'visible'};
 `;
 

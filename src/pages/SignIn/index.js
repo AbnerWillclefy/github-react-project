@@ -7,11 +7,11 @@ import * as Styles from './styles'
 
 export default function SignIn() {
 
-    const { name, setName, getUser } = useContext(UserContext);
+    const { username, setUsername, getUser } = useContext(UserContext);
     const [written, setWritten] = useState(true);
 
     function handleGetUser() {
-        if(name === '') {
+        if(username === '') {
             setWritten(false)
         } else {
             getUser();
@@ -26,8 +26,8 @@ export default function SignIn() {
                 <Styles.Input 
                         type='text' 
                         placeholder='Usuário' 
-                        value={name} 
-                        onChange={(event) => {setName(event.target.value); setWritten(true)}}/> 
+                        value={username} 
+                        onChange={(event) => {setUsername(event.target.value); setWritten(true)}}/> 
 
                 <Styles.Span written={written}>Campo obrigatório</Styles.Span>            
             </Styles.Login>

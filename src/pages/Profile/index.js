@@ -1,6 +1,8 @@
 import { useContext } from "react"
 import { UserContext } from "../../context/user"
 
+import Menu from '../../components/Menu'
+
 import Lottie from 'react-lottie';
 import animationData from '../../lotties/animation.json';
 
@@ -18,7 +20,13 @@ export default function Profile() {
         }
     }
 
-    const { user, loading } = useContext(UserContext);
+    const { user, loading, setUsername, setUser } = useContext(UserContext);
+
+    function left() { 
+        setUser({});
+        setUsername('');
+        history.push('/');
+    }
 
     if(loading) {
         return (
@@ -31,12 +39,13 @@ export default function Profile() {
         )
     } else {
         return(
+            <>
             <Styles.Container>
                 <Styles.Avatar src={user.avatar} />
                 <Styles.Top>
                     <span>{`#${user.login}`}</span>
                     <div>
-                        <span onClick={() => history.push('/')}>Sair</span>
+                        <span onClick={() => left()}>Sair</span>
                     </div>
                 </Styles.Top>
 
@@ -72,6 +81,8 @@ export default function Profile() {
                     <Styles.Bio>{user.bio}</Styles.Bio>
                 </Styles.Bottom>
             </Styles.Container>
+            <Menu />
+            </>
         )
     }
 }
