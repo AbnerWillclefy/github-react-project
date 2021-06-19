@@ -8,12 +8,21 @@ function UserProvider({ children }) {
     const [user, setUser] = useState({});
     const [loading, setLoading] = useState(false);
     const [reposData, setReposData] = useState({});
-    const [gotRepos, setGotRepos] = useState(false)
+    const [gotRepos, setGotRepos] = useState(false);
+    const [followersData, setFollowersData] = useState({});
+    const [gotFollowers, setGotFollowers] = useState(false)
 
     function gotoRepos() {
         if(gotRepos === false) {
             getRepos();
             setGotRepos(true);
+        }
+    }
+
+    function gotoFollowers() {
+        if(gotFollowers === false) {
+            getFollowers();
+            setGotFollowers(true);
         }
     }
     
@@ -57,6 +66,20 @@ function UserProvider({ children }) {
         setLoading(false)
     }
 
+    async function getFollowers() {
+        setLoading(true)
+        setGotFollowers(false);
+        try {
+            const { data } = await api.get(`${username}/followers`)
+
+            setFollowersData(data);
+
+        } catch(err) {
+            console.log(err)
+        }
+        setLoading(false)
+    }
+
     return (
         <UserContext.Provider value={{username, 
                                       setUsername, 
@@ -67,7 +90,9 @@ function UserProvider({ children }) {
                                       setLoading, 
                                       getRepos, 
                                       reposData,
-                                      gotoRepos, }}>
+                                      gotoRepos,
+                                      followersData,
+                                      gotoFollowers, }}>
             {children}
         </UserContext.Provider>
     )

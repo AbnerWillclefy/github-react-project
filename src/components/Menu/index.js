@@ -1,10 +1,10 @@
 import * as Styles from './styles'
 import history from '../../services/history'
 import { UserContext } from '../../context/user';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 
 export default function Menu() {
-    const { gotoRepos } = useContext(UserContext);
+    const { gotoRepos, gotoFollowers } = useContext(UserContext);
     
 
     return (
@@ -17,7 +17,7 @@ export default function Menu() {
                 <img src='assets/github-logo.png' alt='Github icon'/>
                 <span>Repos</span>
             </Styles.Option>
-            <Styles.Option onClick={() => {history.push('/followers')}}>
+            <Styles.Option onClick={() => {history.push('/followers'); gotoFollowers()}}>
                 <img src='assets/users.png' alt='Followers'/>
                 <span>Seguidores</span>
             </Styles.Option>
