@@ -17,6 +17,10 @@ html {
     color: var(--white);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 
 :root {
     --black: #000000;

@@ -120,3 +120,7 @@ export const Bio = styled.div`
     margin: 0 18px 0 25px;
     font-size: 18px;
 `;
+
+export const Left = styled.span`
+    cursor: pointer;
+`;

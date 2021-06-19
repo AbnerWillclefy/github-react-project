@@ -45,7 +45,7 @@ export default function Profile() {
                 <Styles.Top>
                     <span>{`#${user.login}`}</span>
                     <div>
-                        <span onClick={() => left()}>Sair</span>
+                        <Styles.Left onClick={() => left()}>Sair</Styles.Left>
                     </div>
                 </Styles.Top>
 

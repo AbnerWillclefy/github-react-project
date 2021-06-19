@@ -5,6 +5,7 @@ import Lottie from 'react-lottie';
 import animationData from '../../lotties/animation.json';
 
 import Menu from '../../components/Menu'
+import Repo from '../../components/Repo'
 
 import * as Styles from './styles'
 
@@ -20,6 +21,7 @@ export default function Repos() {
 
     const {loading, reposData } = useContext(UserContext);
 
+
     if(loading) {
         return (
             <Styles.Loading>
@@ -33,9 +35,19 @@ export default function Repos() {
         return(
             <>
                 <Styles.Container>
-                    <Styles.Repo>
-                    {reposData[1].name}
-                    </Styles.Repo>
+                    <Styles.Top>
+                        <span>{`${reposData.length} repositórios`}</span>
+                    </Styles.Top>
+                    {reposData.map((data, index) => {
+                        return (
+                            <Repo 
+                                title={data.name} 
+                                description={data.description}
+                                stars={data.stargazers_count} 
+                                isPrivate={data.private} 
+                                key={index}/>
+                        )
+                    })}
                 </Styles.Container>
                 <Menu />
             </>
