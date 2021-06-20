@@ -108,6 +108,7 @@ export const NumberInfo = styled.div`
 
 export const BioName = styled.div`
     display: flex;
+    visibility: ${({bio}) => bio ? 'visible' : 'hidden'};
     width: 100%;
     margin-top: 47px;
     font-weight: bold;

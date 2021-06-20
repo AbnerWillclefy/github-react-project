@@ -74,7 +74,7 @@ export default function Profile() {
                         </Styles.Cards>
                     </Styles.Numbers>
 
-                    <Styles.BioName>
+                    <Styles.BioName bio={user.bio}>
                         <Styles.Yellow>{}</Styles.Yellow>
                         <Styles.Name>BIO</Styles.Name>
                     </Styles.BioName>
