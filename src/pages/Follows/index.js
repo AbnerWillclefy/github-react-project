@@ -19,7 +19,7 @@ export default function Follows() {
         }
     }
 
-    const { loading, followsData } = useContext(UserContext);
+    const { loading, followsData, user } = useContext(UserContext);
 
     if(loading) {
         return (
@@ -35,7 +35,7 @@ export default function Follows() {
             <>
                 <Styles.Container>
                     <Styles.Top>
-                        <span>{`${followsData.length} seguindo`}</span>
+                        <span>{`${user.following} seguindo`}</span>
                     </Styles.Top>
                     {followsData.map((data, index) => {
                         return (

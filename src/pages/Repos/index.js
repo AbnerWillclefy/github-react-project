@@ -19,7 +19,7 @@ export default function Repos() {
         }
     }
 
-    const {loading, reposData } = useContext(UserContext);
+    const {loading, reposData, user } = useContext(UserContext);
 
 
     if(loading) {
@@ -36,7 +36,7 @@ export default function Repos() {
             <>
                 <Styles.Container>
                     <Styles.Top>
-                        <span>{`${reposData.length} repositórios`}</span>
+                        <span>{`${user.repos} repositórios`}</span>
                     </Styles.Top>
                     {reposData.map((data, index) => {
                         return (

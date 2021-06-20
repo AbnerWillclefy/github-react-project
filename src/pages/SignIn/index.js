@@ -14,7 +14,7 @@ export default function SignIn() {
         if(username === '') {
             setWritten(false)
         } else {
-            getUser();
+            getUser(username);
             history.push('/user');
         }
     }

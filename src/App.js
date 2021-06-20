@@ -1,6 +1,6 @@
 import { Router } from 'react-router-dom'
 import { UserProvider } from './context/user.js';
-import Routes from './routes/routes.js'
+import Routes from './routes/index.js'
 import history from './services/history'
 import './styles/App.css'
 

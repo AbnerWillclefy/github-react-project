@@ -13,6 +13,7 @@ function UserProvider({ children }) {
     const [gotFollowers, setGotFollowers] = useState(false);
     const [followsData, setFollowsData] = useState({});
     const [gotFollows, setGotFollows] = useState(false)
+    const [signed, setSigned] = useState(false);
 
     function gotoRepos() {
         if(gotRepos === false) {
@@ -35,13 +36,14 @@ function UserProvider({ children }) {
         }
     }
     
-    async function getUser() {
+    async function getUser(userName) {
         try {
+            setSigned(true);
             setLoading(true);
             setGotRepos(false);
             setGotFollowers(false);
             setGotFollows(false);
-            const { data } = await api.get(username);
+            const { data } = await api.get(userName);
 
             setUser({name: data.name, 
                      login: data.login,
@@ -106,20 +108,24 @@ function UserProvider({ children }) {
     }
 
     return (
-        <UserContext.Provider value={{username, 
-                                      setUsername, 
-                                      getUser, 
-                                      user, 
-                                      loading, 
-                                      setUser, 
-                                      setLoading, 
-                                      getRepos, 
-                                      reposData,
-                                      gotoRepos,
-                                      followersData,
-                                      gotoFollowers,
-                                      followsData,
-                                      gotoFollows, }}>
+        <UserContext.Provider value={{
+            username, 
+            setUsername, 
+            getUser, 
+            user, 
+            loading, 
+            setUser, 
+            setLoading, 
+            getRepos, 
+            reposData,
+            gotoRepos,
+            followersData,
+            gotoFollowers,
+            followsData,
+            gotoFollows,
+            signed,
+            setSigned,
+        }}>
             {children}
         </UserContext.Provider>
     )

@@ -33,3 +33,13 @@ export const Name = styled.span`
     font-size: 16px;
     font-weight: bold;
 `;
+
+export const Arrow = styled.span`
+    margin-left: auto;
+    margin-right: 24px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+`
