@@ -21,54 +21,48 @@
 
 ## 🧐 Sobre o projeto <a name = "about"></a>
 
-Este projeto exibe o perfil de um usuário do github, listando suas informações e seus repositórios.
+Este projeto exibe o perfil de um usuário do github, listando suas informações, 
 
 ## 🎨 Layout
 
-### Telas Desktop
-
-<div align="center">
-  <img width="100%" src="./public/loginpagedesktop.png"/>
-  <img width="100%" src="./public/profilepagedesktop.png"/>
-</div>
-
-### Telas Mobile
+### Telas
 
 <div align="center">
   <div display="flex">
-  <img width="40%" src="./public/loginpagemobile.png"/>
-  <img width="40%" src="./public/profilepagemobile.png"/>
+  <img width="100%" src="./public/Telas.png"/>
   </div>
 </div>
 
 ## :video_game: Link para o projeto 
-:point_right: [Github-UserProfile](https://github-user-profile-theta.vercel.app)
+:point_right: [Github-user-react](https://github-user-react.vercel.app)
 
 ## 🎈 Utilidades
 
-- Layout Responsivo
 - Pesquisar usuário
 - Listar informações do perfil
   - Foto do perfil
+  - Localização
   - Bio
   - Quantidade de seguidores e perfis seguidos
 - Listar repositórios
+  - Quantidade de estrelas de cada repositório
+- Listar seguidores
+- Listar perfis seguidos
+- Navegar nos perfis dos usuarios seguidos e seguidores
 
-### :bulb: Utilidades para serem desenvolvidas
-- Mostrar o readme pessoal do usuário
 
 ## 🚀 Tecnologias utilizadas 
 
 - <code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="Javascript"/></code>
 - <code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" alt="React"/></code>
-- <code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png" alt="SASS"/></code>
 
 ## 🎉 Conhecimentos Adquiridos
 
 - React Hooks
-- React Components
+- Context API
+- React Router DOM
+- Styled Components
 - Axios
-- Sass
 
 ## 🌟 Autor 🌟
 
