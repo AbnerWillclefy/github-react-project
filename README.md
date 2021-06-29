@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+<h3 align="center">GitHubUser-React</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/AbnerWillclefy/Github-UserProfile?color=%2304D361&style=flat">
 
-## Available Scripts
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/AbnerWillclefy/Github-UserProfile?style=flat">
+  
+  <a href="https://github.com/AbnerWillclefy/Github-UserProfile/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/AbnerWillclefy/Github-UserProfile?style=flat">
+  </a>
+    
+   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?style=flat">
+  
+</p>
 
-In the project directory, you can run:
+---
 
-### `yarn start`
+<p align="center"> Um projeto criado em React para criação exibição de um usuário Github
+    <br> 
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🧐 Sobre o projeto <a name = "about"></a>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Este projeto exibe o perfil de um usuário do github, listando suas informações e seus repositórios.
 
-### `yarn test`
+## 🎨 Layout
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Telas Desktop
 
-### `yarn build`
+<div align="center">
+  <img width="100%" src="./public/loginpagedesktop.png"/>
+  <img width="100%" src="./public/profilepagedesktop.png"/>
+</div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Telas Mobile
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<div align="center">
+  <div display="flex">
+  <img width="40%" src="./public/loginpagemobile.png"/>
+  <img width="40%" src="./public/profilepagemobile.png"/>
+  </div>
+</div>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## :video_game: Link para o projeto 
+:point_right: [Github-UserProfile](https://github-user-profile-theta.vercel.app)
 
-### `yarn eject`
+## 🎈 Utilidades
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Layout Responsivo
+- Pesquisar usuário
+- Listar informações do perfil
+  - Foto do perfil
+  - Bio
+  - Quantidade de seguidores e perfis seguidos
+- Listar repositórios
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### :bulb: Utilidades para serem desenvolvidas
+- Mostrar o readme pessoal do usuário
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🚀 Tecnologias utilizadas 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- <code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="Javascript"/></code>
+- <code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" alt="React"/></code>
+- <code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png" alt="SASS"/></code>
 
-## Learn More
+## 🎉 Conhecimentos Adquiridos
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- React Hooks
+- React Components
+- Axios
+- Sass
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🌟 Autor 🌟
 
-### Code Splitting
+- [@AbnerWillclefy](https://github.com/AbnerWillclefy)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![Linkedin Badge](https://img.shields.io/badge/-AbnerWillclefy-blue?style=for-the-badge&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/abner-willclefy/)](https://www.linkedin.com/in/abner-willclefy/)
