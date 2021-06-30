@@ -1,12 +1,12 @@
 <h3 align="center">GitHubUser-React</h3>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/AbnerWillclefy/Github-UserProfile?color=%2304D361&style=flat">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/AbnerWillclefy/github-react-project?color=%2304D361&style=flat">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/AbnerWillclefy/Github-UserProfile?style=flat">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/AbnerWillclefy/github-react-project?style=flat">
   
-  <a href="https://github.com/AbnerWillclefy/Github-UserProfile/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/AbnerWillclefy/Github-UserProfile?style=flat">
+  <a href="https://github.com/AbnerWillclefy/github-react-project/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/AbnerWillclefy/github-react-project?style=flat">
   </a>
     
    <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?style=flat">
